@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <title>医学影像传输及会诊系统</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="Css/BootStrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="Css/public.css" />
+  <link rel="stylesheet" href="Css/index.css" />
+  <link rel="stylesheet" href="Css/FontAwesome/font-awesome.min.css" />
+</head>
+<body>
+  <div class="wallpage"></div>
+  <!--头部-->
+  <header class="">
+    <nav class="navbar navbar-index">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="javascript:" class="navbar-brand">医学影像传输及会诊系统</a>
+        </div>
+        <ul class="nav-login navbar-nav navbar-right">
+          <!-- 未登陆状态 -->
+          <li class="noUser"><a href="login.html" id="login_href">登录</a><a href="Common/register.html" id="register_href">注册</a></li>
+          <!-- 正常用户 -->
+          <li class="norUser"><span>3d医生</span><a href="javascript:" onclick="loginOut()">注销</a><a href="javascript:" onclick="enterPlat();">进入平台</a></li>
+          <!-- 未审核或未审核成功用户 -->
+          <li class="illUser"><span>3d医生</span><a href="javascript:" onclick="loginOut()">注销</a><a href="common/authentication.html" id="authen_href">立即认证</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--banner部分-->
+  <div class="banner">
+    <div class="banner-model"></div>
+    <div class="banner-content">
+      <h1>医学影像传输及会诊系统</h1>
+      <h3 class="sub-title">值得信赖的会诊平台</h3>
+      <!--<div class="join"><a href="login.html" target="_blank">立即入驻</a></div>-->
+    </div>
+    <!--<div class="container">
+      
+    </div>-->
+  </div>
+  <!-- 平台用户-->
+  <div class="plat-user">
+    <div class="container">
+      <!-- 标题 -->
+      <div class="sub-title">
+        <h2 class="catitle">平台用户</h2>
+      </div>
+      <!-- 内容 -->
+      <div class="sub-content">
+        <ul class="row">
+          <li class="col-sm-5">
+            <div class="row list-content">
+              <div class="col-sm-12 col-md-7 user-img">
+                <img src="Img/user-hospital.png" class="img-response" alt="" />
+              </div>
+              <div class="col-sm-12 col-md-5 user-desc">
+                <h3>医生用户</h3>
+                <p>提供更完善的诊断服务</br>轻松获取权威病理专家诊断意见</p>
+              </div>
+            </div>
+          </li>
+          <li class="col-sm-offset-2 col-sm-5">
+            <div class="row list-content">
+              <div class="col-sm-12 col-md-7 user-img">
+                <img src="Img/user-doctor.png" class="img-response" alt="" />
+              </div>
+              <div class="col-sm-12 col-md-5 user-desc">
+                <h3>专家用户</h3>
+                <p>供广大病理专家提高技能</br>交流学习，实战提高</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 平台优势-->
+  <div class="plat-feature">
+    <div class="container">
+      <!-- 标题 -->
+      <div class="sub-title">
+        <h2 class="catitle">平台优势</h2>
+      </div>
+      <!-- 内容 -->
+      <div class="sub-content">
+        <ul class="row">
+          <li class="col-sm-6 col-md-3">
+            <div class="list-content">
+              <img src="/img/feature-expert.png" alt="" />
+              <h3>权威专家</h3>
+              <p>提供更完善的诊断服务，轻松获取权威病理专家诊断意见</p>
+            </div>
+          </li>
+          <li class="col-sm-6 col-md-3">
+            <div class="list-content">
+              <img src="/img/feature-case.png" alt="" />
+              <h3>数字病理</h3>
+              <p>提供更完善的诊断服务，轻松获取权威病理专家诊断意见</p>
+            </div>
+          </li>
+          <li class="col-sm-6 col-md-3">
+            <div class="list-content">
+              <img src="/img/feature-slide.png" alt="" />
+              <h3>在线切片浏览</h3>
+              <p>提供更完善的诊断服务，轻松获取权威病理专家诊断意见</p>
+            </div>
+          </li>
+          <li class="col-sm-6 col-md-3">
+            <div class="list-content">
+              <img src="/img/feature-video.png" alt="" />
+              <h3>远程视频会议</h3>
+              <p>提供更完善的诊断服务，轻松获取权威病理专家诊断意见</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 平台数据统计-->
+  <div class="plat-statistic">
+    <div class="container">
+      <div class="row plat-data">
+        <div class="data-list col-sm-4"><h4><span>80名</span><span>权威专家</span></h4></div>
+        <div class="data-list col-sm-4"><h4><span id="fun-level">1000个</span><span>已诊断病例</span></h4></div>
+        <div class="data-list col-sm-4"><h4><span>15家</span><span>合作企业</span></h4></div>
+      </div>
+    </div>
+  </div>
+  <!-- 加入我们-->
+  <div class="join-us">
+    <div class="join-model"></div>
+    <div class="container">
+      <div class="sub-title"><h2 class="catitle">加入我们</h2></div>
+      <ul class="step row">
+        <li class="col-sm-12 col-md-4">
+          <h3><span>1.</span><span>注册用户</span></h3>
+          <p>注册个人用户</p>
+        </li>
+        <li class="col-sm-12 col-md-4">
+          <h3><span>2.</span><span>在线认证</span></h3>
+          <p>通过证件照，选择自己想要认证的用户类型，在线认证。</p>
+        </li>
+        <li class="col-sm-12 col-md-4">
+          <h3><span>3.</span><span>平台使用</span></h3>
+          <p>根据用户不同，拥有不同的权限功能。</p>
+        </li>
+      </ul>
+      <div class="join">
+        <a href="login.html" target="_blank">立即加入</a>
+      </div>
+    </div>
+  </div>
+  <!--底部-->
+  <footer class="footer">
+    <div class="container">
+      <p>山东志盈医学科技有限公司 版权所有©2019</p>
+      <p>技术支持电话：0531-82968590</p>
+    </div>
+  </footer>
+  <script src="Plug/Jquery/jquery-3.2.1.min.js"></script>
+  <script src="Plug/BootStrap/bootstrap.min.js"></script>
+  <script src="Plug/BootStrap/bootlint.js"></script>
+  <script src="Plug/Layer/layer.js"></script>
+  <script src="Js/index.js"></script>
+
+  <script>
+
+  </script>
+</body>
+</html>
